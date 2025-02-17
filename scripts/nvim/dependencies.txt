@@ -1,0 +1,5 @@
+# You need to install following dependencies
+
+NeoVim
+git
+
