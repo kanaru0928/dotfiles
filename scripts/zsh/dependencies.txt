@@ -1,4 +1,5 @@
 # You need to install following dependencies
 
 zsh
+eza
 
