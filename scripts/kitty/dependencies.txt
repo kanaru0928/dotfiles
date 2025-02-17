@@ -1,0 +1,6 @@
+# You need to install following dependencies
+
+Kitty
+FiraMono Nerd Font
+Firge
+
