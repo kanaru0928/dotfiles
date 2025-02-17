@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-config_dir=$(cd $(dirname $0)/../kitty; pwd)
+config_dir=$(cd $(dirname $0)/../../kitty; pwd)
 
 echo "kittyを設定中…"
 
