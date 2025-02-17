@@ -6,6 +6,7 @@ echo "zshを設定中…"
 
 ln -s ${config_dir}/.zshrc ~/
 ln -s ${config_dir}/.p10k.zsh ~/
+curl -fsSLo https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/refs/heads/main/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh ~/.config/zsh
 
 echo "zshの設定完了"
 
