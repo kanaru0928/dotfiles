@@ -11,6 +11,9 @@ require("jetpack.packer").add({
 	{ "catppuccin/nvim", as = "catppuccin" },
 	{ "itchyny/lightline.vim" },
 	{ "github/copilot.vim", lazy = false },
+  { "lambdalisue/fern.vim", as = "fern" },
+  { "lambdalisue/vim-nerdfont", depends = "fern", as = "nerdfont" },
+  { "lambdalisue/vim-fern-renderer-nerdfont", depends = "nerdfont" },
 })
 
 local jetpack = require("jetpack")
@@ -24,3 +27,5 @@ end
 
 vim.cmd.colorscheme("catppuccin-mocha")
 vim.g.lightline = { ["colorscheme"] = "catppuccin" }
+vim.g["fern#renderer"] = "nerdfont"
+vim.g["fern#renderer#nerdfont#indent_markers"] = 1

@@ -40,6 +40,10 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit load 'zsh-users/zsh-history-substring-search'
+zinit ice wait atload'_history_substring_search_config'
+
 ### End of Zsh Plugins
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -47,7 +51,7 @@ zinit light zsh-users/zsh-autosuggestions
 
 # aliases
 
-alias ls="eza --icons --git --hyperlink"
+alias ls="eza --group-directories-first --icons --git --hyperlink"
 alias ll="ls -l"
 alias la="ll -a"
 alias l="la"
