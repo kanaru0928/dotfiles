@@ -40,9 +40,9 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
-zinit snippet OMZ::plugins/git/git.plugin.zsh
-zinit load 'zsh-users/zsh-history-substring-search'
-zinit ice wait atload'_history_substring_search_config'
+zinit light 'zsh-users/zsh-history-substring-search'
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 ### End of Zsh Plugins
 
