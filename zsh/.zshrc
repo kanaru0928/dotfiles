@@ -66,3 +66,10 @@ export NVM_DIR="$HOME/.nvm"
 
 ### End of NVM Setup
 
+### Pyenv Setup
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+PATH="$HOME/.local/bin:$PATH"
+### End of Pyenv Setup
