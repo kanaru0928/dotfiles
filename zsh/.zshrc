@@ -73,3 +73,8 @@ eval "$(pyenv init - zsh)"
 
 PATH="$HOME/.local/bin:$PATH"
 ### End of Pyenv Setup
+
+### AWS
+export AWS_DEFAULT_PROFILE=AdministratorAccess-760485329571
+### End of AWS
+
