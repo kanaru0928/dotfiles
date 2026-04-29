@@ -1,0 +1,8 @@
+{
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true
+  },
+  "effortLevel": "high",
+  "preferredNotifChannel": "terminal_bell",
+  "remoteControlAtStartup": false
+}
