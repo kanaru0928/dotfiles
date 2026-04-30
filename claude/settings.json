@@ -1,6 +1,7 @@
 {
   "enabledPlugins": {
-    "serena@claude-plugins-official": true
+    "serena@claude-plugins-official": true,
+    "context7@claude-plugins-official": true
   },
   "effortLevel": "high",
   "preferredNotifChannel": "terminal_bell",
