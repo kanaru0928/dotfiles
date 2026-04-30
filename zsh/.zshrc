@@ -1,3 +1,3 @@
-if [ -f ~/dotfiles/zsh/entrypoint.zsh ]; then
-    source ~/dotfiles/zsh/entrypoint.zsh
+if [ -f $DOTFILES_ROOT/zsh/entrypoint.zsh ]; then
+    source $DOTFILES_ROOT/zsh/entrypoint.zsh
 fi

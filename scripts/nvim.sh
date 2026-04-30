@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 set -euo pipefail
-cd "$(dirname "$0/..")"
+cd "$(dirname "$0")/.."
 DOTFILES_ROOT="$(pwd)"
 
 echo "Installing nvim config..."

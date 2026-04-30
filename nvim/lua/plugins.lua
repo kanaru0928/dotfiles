@@ -9,7 +9,7 @@ vim.cmd("packadd vim-jetpack")
 require("jetpack.packer").add({
 	{ "tani/vim-jetpack" },
 	{ "catppuccin/nvim", as = "catppuccin" },
-	{ "itchyny/lightline.vim" },
+	{ "itchyny/lightline.vim", depends = "catppuccin" },
 	{ "github/copilot.vim", lazy = false },
 	{ "lambdalisue/fern.vim", as = "fern" },
 	{ "lambdalisue/vim-nerdfont", depends = "fern", as = "nerdfont" },

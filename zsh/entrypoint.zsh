@@ -1,5 +1,5 @@
 cd "$(dirname "$0")"
 
-if [ -f ./aliases ]; then
-    source ./aliases
+if [ -f ./aliases.zsh ]; then
+    source ./aliases.zsh
 fi
