@@ -4,7 +4,7 @@ palette = "catppuccin_latte"
 
 format = """
 [░▒▓](lavender)\
-[  ](bg:lavender fg:crust)\
+[  ](bg:lavender fg:base)\
 [](bg:lavender fg:base)\
 $directory\
 ([](fg:base bg:lavender)\
@@ -72,13 +72,13 @@ $openstack\
 $azure\
 $docker_context\
 $kubernetes](bg:mauve)\
-([](fg:crust bg:mauve)\
+([](fg:base bg:mauve)\
 $cmd_duration)\
 [](fg:mauve)
 $character"""
 
 [directory]
-style = "fg:crust bg:lavender"
+style = "fg:base bg:lavender"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -92,17 +92,17 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = ""
 style = "bg:lavender"
-format = '[[ $symbol $branch ](fg:crust bg:lavender)]($style)'
+format = '[[ $symbol $branch ](fg:base bg:lavender)]($style)'
 
 [git_status]
 style = "bg:lavender"
-format = '[[($all_status$ahead_behind )](fg:crust bg:lavender)]($style)'
+format = '[[($all_status$ahead_behind )](fg:base bg:lavender)]($style)'
 
 [time]
 disabled = false
 time_format = "%T"
 style = "bg:lavender"
-format = '[[  $time ](fg:crust bg:lavender)]($style)'
+format = '[[  $time ](fg:base bg:lavender)]($style)'
 
 [fill]
 symbol = "-"
@@ -110,7 +110,7 @@ style = "subtext0"
 
 [cmd_duration]
 style = "bg:mauve"
-format = '[[  $duration ](fg:crust bg:mauve)]($style)'
+format = '[[  $duration ](fg:base bg:mauve)]($style)'
 
 [bun]
 format = '[$symbol($version )](bold red bg:mauve)'
@@ -119,10 +119,10 @@ format = '[$symbol($version )](bold red bg:mauve)'
 format = '[$symbol($version(-$name) )](bold 149 bg:mauve)'
 
 [cmake]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [cobol]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [cpp]
 format = '[$symbol($version(-$name) )](bold 149 bg:mauve)'
@@ -131,16 +131,16 @@ format = '[$symbol($version(-$name) )](bold 149 bg:mauve)'
 format = '[$symbol($version )](bold cyan bg:mauve)'
 
 [dart]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [deno]
 format = '[$symbol($version )](green bold bg:mauve)'
 
 [dotnet]
-format = '[$symbol($version )(🎯 $tfm )](fg:crust bg:mauve)'
+format = '[$symbol($version )(🎯 $tfm )](fg:base bg:mauve)'
 
 [elixir]
-format = '[$symbol($version (OTP $otp_version) )](fg:crust bg:mauve)'
+format = '[$symbol($version (OTP $otp_version) )](fg:base bg:mauve)'
 
 [elm]
 format = '[$symbol($version )](cyan bold bg:mauve)'
@@ -152,7 +152,7 @@ format = '[$symbol($version )](bold red bg:mauve)'
 format = '[$symbol($version )](bold green bg:mauve)'
 
 [fortran]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [gleam]
 format = '[$symbol($version )](bold #FFAFF3 bg:mauve)'
@@ -164,7 +164,7 @@ format = '[$symbol($version )](bold cyan bg:mauve)'
 format = '[$symbol($version )](bold bright-cyan bg:mauve)'
 
 [haskell]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [haxe]
 format = '[$symbol($version )](bold fg:202 bg:mauve)'
@@ -176,16 +176,16 @@ format = '[$symbol($version )](bold white bg:mauve)'
 format = '[${symbol}(${version} )](red dimmed bg:mauve)'
 
 [julia]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [kotlin]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [lua]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [maven]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [mojo]
 format = '[$symbol($version )](bold orange bg:mauve)'
@@ -203,16 +203,16 @@ format = '[$symbol($version )](bold yellow bg:mauve)'
 format = '[$symbol($version )](bold green bg:mauve)'
 
 [opa]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [perl]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [php]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [pulumi]
-format = '[$symbol$stack](fg:crust bg:mauve) '
+format = '[$symbol$stack](fg:base bg:mauve) '
 
 [purescript]
 format = '[$symbol($version )](bold white bg:mauve)'
@@ -221,13 +221,13 @@ format = '[$symbol($version )](bold white bg:mauve)'
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )](yellow bold bg:mauve)'
 
 [quarto]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [raku]
 format = '[$symbol($version )](bold 149 bg:mauve)'
 
 [rlang]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [red]
 format = '[$symbol($version )](bold red bg:mauve)'
@@ -242,25 +242,25 @@ format = '[$symbol($version )](bold red bg:mauve)'
 format = '[$symbol($version )](bold red bg:mauve)'
 
 [solidity]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [swift]
 format = '[$symbol($version )](bold 202 bg:mauve)'
 
 [terraform]
-format = '[$symbol$workspace](fg:crust bg:mauve) '
+format = '[$symbol$workspace](fg:base bg:mauve) '
 
 [typst]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [vlang]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [vagrant]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [xmake]
-format = '[$symbol($version )](fg:crust bg:mauve)'
+format = '[$symbol($version )](fg:base bg:mauve)'
 
 [zig]
 format = '[$symbol($version )](bold yellow bg:mauve)'
@@ -269,19 +269,19 @@ format = '[$symbol($version )](bold yellow bg:mauve)'
 format = '[$symbol($profile )(\($region\) )(\[$duration\] )](bold yellow bg:mauve)'
 
 [gcloud]
-format = '[$symbol$account(@$domain)(\($region\))](fg:crust bg:mauve) '
+format = '[$symbol$account(@$domain)(\($region\))](fg:base bg:mauve) '
 
 [openstack]
-format = '[$symbol$cloud(\($project\))](fg:crust bg:mauve) '
+format = '[$symbol$cloud(\($project\))](fg:base bg:mauve) '
 
 [azure]
-format = '[$symbol($subscription)](fg:crust bg:mauve) '
+format = '[$symbol($subscription)](fg:base bg:mauve) '
 
 [docker_context]
-format = '[$symbol$context](fg:crust bg:mauve) '
+format = '[$symbol$context](fg:base bg:mauve) '
 
 [kubernetes]
-format = '[$symbol$context( \($namespace\))](fg:crust bg:mauve) '
+format = '[$symbol$context( \($namespace\))](fg:base bg:mauve) '
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
