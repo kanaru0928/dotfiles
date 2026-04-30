@@ -7,9 +7,9 @@ format = """
 [  ](bg:lavender fg:crust)\
 [](bg:lavender fg:base)\
 $directory\
-[](fg:base bg:lavender)\
+([](fg:base bg:lavender)\
 $git_branch\
-$git_status\
+$git_status)\
 [](fg:base bg:lavender)\
 $time\
 [](fg:lavender)\
@@ -111,6 +111,177 @@ style = "subtext0"
 [cmd_duration]
 style = "bg:mauve"
 format = '[[  $duration ](fg:crust bg:mauve)]($style)'
+
+[bun]
+format = '[$symbol($version )](bold red bg:mauve)'
+
+[c]
+format = '[$symbol($version(-$name) )](bold 149 bg:mauve)'
+
+[cmake]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[cobol]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[cpp]
+format = '[$symbol($version(-$name) )](bold 149 bg:mauve)'
+
+[daml]
+format = '[$symbol($version )](bold cyan bg:mauve)'
+
+[dart]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[deno]
+format = '[$symbol($version )](green bold bg:mauve)'
+
+[dotnet]
+format = '[$symbol($version )(🎯 $tfm )](fg:crust bg:mauve)'
+
+[elixir]
+format = '[$symbol($version (OTP $otp_version) )](fg:crust bg:mauve)'
+
+[elm]
+format = '[$symbol($version )](cyan bold bg:mauve)'
+
+[erlang]
+format = '[$symbol($version )](bold red bg:mauve)'
+
+[fennel]
+format = '[$symbol($version )](bold green bg:mauve)'
+
+[fortran]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[gleam]
+format = '[$symbol($version )](bold #FFAFF3 bg:mauve)'
+
+[golang]
+format = '[$symbol($version )](bold cyan bg:mauve)'
+
+[gradle]
+format = '[$symbol($version )](bold bright-cyan bg:mauve)'
+
+[haskell]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[haxe]
+format = '[$symbol($version )](bold fg:202 bg:mauve)'
+
+[helm]
+format = '[$symbol($version )](bold white bg:mauve)'
+
+[java]
+format = '[${symbol}(${version} )](red dimmed bg:mauve)'
+
+[julia]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[kotlin]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[lua]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[maven]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[mojo]
+format = '[$symbol($version )](bold orange bg:mauve)'
+
+[nim]
+format = '[$symbol($version )](bold yellow bg:mauve)'
+
+[nodejs]
+format = '[$symbol($version )](bold green bg:mauve)'
+
+[ocaml]
+format = '[$symbol($version )](bold yellow bg:mauve)'
+
+[odin]
+format = '[$symbol($version )](bold green bg:mauve)'
+
+[opa]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[perl]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[php]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[pulumi]
+format = '[$symbol$stack](fg:crust bg:mauve) '
+
+[purescript]
+format = '[$symbol($version )](bold white bg:mauve)'
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )](yellow bold bg:mauve)'
+
+[quarto]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[raku]
+format = '[$symbol($version )](bold 149 bg:mauve)'
+
+[rlang]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[red]
+format = '[$symbol($version )](bold red bg:mauve)'
+
+[ruby]
+format = '[$symbol($version )](bold red bg:mauve)'
+
+[rust]
+format = '[$symbol($version )](bold red bg:mauve)'
+
+[scala]
+format = '[$symbol($version )](bold red bg:mauve)'
+
+[solidity]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[swift]
+format = '[$symbol($version )](bold 202 bg:mauve)'
+
+[terraform]
+format = '[$symbol$workspace](fg:crust bg:mauve) '
+
+[typst]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[vlang]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[vagrant]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[xmake]
+format = '[$symbol($version )](fg:crust bg:mauve)'
+
+[zig]
+format = '[$symbol($version )](bold yellow bg:mauve)'
+
+[aws]
+format = '[$symbol($profile )(\($region\) )(\[$duration\] )](bold yellow bg:mauve)'
+
+[gcloud]
+format = '[$symbol$account(@$domain)(\($region\))](fg:crust bg:mauve) '
+
+[openstack]
+format = '[$symbol$cloud(\($project\))](fg:crust bg:mauve) '
+
+[azure]
+format = '[$symbol($subscription)](fg:crust bg:mauve) '
+
+[docker_context]
+format = '[$symbol$context](fg:crust bg:mauve) '
+
+[kubernetes]
+format = '[$symbol$context( \($namespace\))](fg:crust bg:mauve) '
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"

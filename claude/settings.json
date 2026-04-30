@@ -1,6 +1,6 @@
 {
   "enabledPlugins": {
-    "gopls-lsp@claude-plugins-official": true
+    "serena@claude-plugins-official": true
   },
   "effortLevel": "high",
   "preferredNotifChannel": "terminal_bell",
