@@ -45,6 +45,7 @@
   <avoid>Do not add unnecessary external dependencies; keep dependencies to an absolute minimum.</avoid>
   <do>Prioritize consistency with existing code over code beauty.</do>
   <do>Follow patterns from other files in the project.</do>
+  <do>Maintain complete consistency with existing specifications. If an action would deviate even slightly from existing specifications, or if existing specifications contain deficiencies, always negotiate with the user before proceeding.</do>
 </rules>
 
 <purpose>Ironclad Rules for Interpreting Requests</purpose>
