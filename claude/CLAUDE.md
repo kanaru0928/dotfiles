@@ -95,3 +95,9 @@
   <do>If important decisions are required (architecture selection, breaking changes, security-related implementations, etc.), confirm with the user before implementation. Confirmation is unnecessary if it can be reasonably inferred from the patterns in the existing code.</do>
   <do>Always confirm if there are logical contradictions or implementation conflicts in the user's request (e.g., when "delete A" and "update A" are requested at the same time).</do>
 </rules>
+
+<rules priority="MUST" name="Contextual Validation of Changes">
+  <do>Before applying any change, validate the context in which that change will be placed.</do>
+  <do>Specifically, verify two points: (1) whether the default behavior of the tool or framework is compatible with the constraints of the environment, and (2) whether the scope of the change targets only the intended subject.</do>
+  <do>Explicitly check for any side effects the change may have on existing components or behaviors — not just the correctness of the change itself — before proceeding.</do>
+</rules>
