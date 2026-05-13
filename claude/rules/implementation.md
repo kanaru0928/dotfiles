@@ -13,7 +13,10 @@
 </workflow>
 
 <rules priority="MUST" name="Exploration Rules">
-  <do>Use serena to reduce token consumption.</do>
+  <do>Use serena for all codebase exploration, including when explaining or
+investigating code, not only during implementation.</do>
+  <avoid>Do not spawn Explore subagents for codebase lookups when Serena is
+available.</avoid>                                                          
   <avoid>Do not reference more files than necessary.</avoid>
 </rules>
 
