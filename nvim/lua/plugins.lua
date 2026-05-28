@@ -9,7 +9,7 @@ vim.cmd("packadd vim-jetpack")
 require("jetpack.packer").add({
 	{ "tani/vim-jetpack" },
 	{ "catppuccin/nvim", as = "catppuccin" },
-	{ "itchyny/lightline.vim", depends = "catppuccin" },
+	{ "nvim-lualine/lualine.nvim" },
 	{ "github/copilot.vim", lazy = false },
 	{ "lambdalisue/fern.vim", as = "fern" },
 	{ "lambdalisue/vim-nerdfont", depends = "fern", as = "nerdfont" },
@@ -17,6 +17,10 @@ require("jetpack.packer").add({
 })
 
 local jetpack = require("jetpack")
+
+require("catppuccin").setup({
+	flavour = "mocha",
+})
 
 for _, name in ipairs(jetpack.names()) do
 	if not jetpack.tap(name) then
@@ -26,6 +30,6 @@ for _, name in ipairs(jetpack.names()) do
 end
 
 vim.cmd.colorscheme("catppuccin-mocha")
-vim.g.lightline = { ["colorscheme"] = "catppuccin" }
+require("lualine").setup({ options = { theme = "catppuccin-mocha" } })
 vim.g["fern#renderer"] = "nerdfont"
 vim.g["fern#renderer#nerdfont#indent_markers"] = 1
