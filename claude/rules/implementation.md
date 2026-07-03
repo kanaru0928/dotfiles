@@ -12,14 +12,6 @@
   <phase name="Verification">Confirm that the implementation satisfies the user's requirements. Verify code quality using linting and builds.</phase>
 </workflow>
 
-<rules priority="MUST" name="Exploration Rules">
-  <do>Use serena for all codebase exploration, including when explaining or
-investigating code, not only during implementation.</do>
-  <avoid>Do not spawn Explore subagents for codebase lookups when Serena is
-available.</avoid>                                                          
-  <avoid>Do not reference more files than necessary.</avoid>
-</rules>
-
 <rules priority="MUST" name="Planning Rules">
   <do>Research best practices to ensure user requirements are satisfied. If intentionally deviating from best practices, inform the user accordingly.</do>
   <do>Create a plan that satisfies all user requirements.</do>

@@ -101,3 +101,5 @@
   <do>Specifically, verify two points: (1) whether the default behavior of the tool or framework is compatible with the constraints of the environment, and (2) whether the scope of the change targets only the intended subject.</do>
   <do>Explicitly check for any side effects the change may have on existing components or behaviors — not just the correctness of the change itself — before proceeding.</do>
 </rules>
+
+@RTK.md
