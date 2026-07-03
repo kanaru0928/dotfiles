@@ -1,10 +1,33 @@
 {
+  "model": "claude-fable-5[1m]",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
+      }
+    ]
+  },
   "enabledPlugins": {
-    "serena@claude-plugins-official": true,
-    "context7@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true
+    "skill-creator@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "cloudflare": {
+      "source": {
+        "source": "github",
+        "repo": "cloudflare/skills"
+      }
+    }
   },
   "effortLevel": "high",
+  "tui": "fullscreen",
   "preferredNotifChannel": "terminal_bell",
-  "remoteControlAtStartup": false
+  "remoteControlAtStartup": false,
+  "agentPushNotifEnabled": true
 }
