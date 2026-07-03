@@ -15,7 +15,7 @@
   <do>The good tag shows a good example (recommended description/behavior) within examples in a single paragraph. The agent should refer to the descriptions/behaviors shown in the good tag.</do>
   <do>The bad tag shows a bad example (description/behavior to avoid) within examples in a single paragraph. The agent must not perform the descriptions/behaviors shown in the bad tag.</do>
   <do>If there is a contradiction in content between multiple rules or purposes, the one with the higher priority takes precedence. If there is a contradiction between identical priorities, the more specific and detailed rules take precedence.</do>
-  <do>The purpose, rules, and workflows tags must be placed at the root.</do>
+  <do>The purpose, rules, and workflow tags must be placed at the root.</do>
 </rules>
 
 <purpose>
@@ -51,17 +51,16 @@
 <purpose>Ironclad Rules for Interpreting Requests</purpose>
 
 <rules priority="GLOBAL MUST" name="Handling Ambiguous Requests">
-  <do>Always ask questions about unclear points; do not guess.</do>
-  <do>Prioritize confirmation by asking "Is it correct to understand that...?"</do>
+  <do>When what to make is unclear, ask a question rather than guessing. Technical decisions on how to make it may be inferred from existing code patterns.</do>
+  <do>Confirm ambiguous interpretations by asking "Is it correct to understand that...?"</do>
   <do>Execute only what is explicitly requested.</do>
 </rules>
 
 <rules priority="GLOBAL MUST" name="Prohibited Actions Checklist">
   <avoid>Do not add unrequested features.</avoid>
   <avoid>Do not perform arbitrary refactoring.</avoid>
-  <avoid>Do not implement based on guessing.</avoid>
+  <avoid>Do not implement based on guessing about what to make.</avoid>
   <avoid>Do not broadly interpret requests out of helpfulness.</avoid>
-  <do>The above applies to the interpretation of the request regarding "what to make". Technical judgments on "how to make it" are excluded.</do>
 </rules>
 
 <workflow priority="GLOBAL MUST" name="Self-Questioning Before Execution">
@@ -92,8 +91,8 @@
 </rules>
 
 <rules priority="MUST" name="Confirmation Items Before Implementation">
-  <do>If important decisions are required (architecture selection, breaking changes, security-related implementations, etc.), confirm with the user before implementation. Confirmation is unnecessary if it can be reasonably inferred from the patterns in the existing code.</do>
-  <do>Always confirm if there are logical contradictions or implementation conflicts in the user's request (e.g., when "delete A" and "update A" are requested at the same time).</do>
+  <do>Confirm with the user before implementation when the decision falls outside what existing code patterns suggest — such as architecture selection, breaking changes, or security-related implementations.</do>
+  <do>Confirm when there are logical contradictions or implementation conflicts in the user's request (e.g., when "delete A" and "update A" are requested at the same time).</do>
 </rules>
 
 <rules priority="MUST" name="Contextual Validation of Changes">
