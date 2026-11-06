@@ -11,9 +11,9 @@ require("jetpack.packer").add({
 	{ "catppuccin/nvim", as = "catppuccin" },
 	{ "nvim-lualine/lualine.nvim" },
 	{ "github/copilot.vim", lazy = false },
-	{ "lambdalisue/fern.vim", as = "fern" },
-	{ "lambdalisue/vim-nerdfont", depends = "fern", as = "nerdfont" },
-	{ "lambdalisue/vim-fern-renderer-nerdfont", depends = "nerdfont" },
+  { "nvim-tree/nvim-web-devicons", lazy = false },
+  { "nvim-tree/nvim-tree.lua", lazy = false },
+  { "sindrets/diffview.nvim" }
 })
 
 local jetpack = require("jetpack")
@@ -30,6 +30,41 @@ for _, name in ipairs(jetpack.names()) do
 end
 
 vim.cmd.colorscheme("catppuccin-mocha")
+
+vim.cmd([[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+  highlight NormalNC guibg=none
+  highlight NormalSB guibg=none
+]])
+
 require("lualine").setup({ options = { theme = "catppuccin-mocha" } })
-vim.g["fern#renderer"] = "nerdfont"
-vim.g["fern#renderer#nerdfont#indent_markers"] = 1
+
+require("nvim-tree").setup({
+	filters = {
+		git_ignored = false,
+	},
+	on_attach = function(bufnr)
+		local api = require("nvim-tree.api")
+		api.config.mappings.default_on_attach(bufnr)
+
+		local function with_node_path(cmd)
+			return function()
+				local node = api.tree.get_node_under_cursor()
+				if node and node.absolute_path then
+					vim.cmd(cmd .. " " .. vim.fn.fnameescape(node.absolute_path))
+				end
+			end
+		end
+
+		local function opts(desc)
+			return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+		end
+
+		vim.keymap.set("n", "gd", with_node_path("DiffviewOpen --"), opts("Diffview Open"))
+		vim.keymap.set("n", "gh", with_node_path("DiffviewFileHistory"), opts("Diffview File History"))
+	end,
+})
+

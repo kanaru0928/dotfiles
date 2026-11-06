@@ -1,5 +1,9 @@
 {
-  "model": "sonnet",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "model": "opus",
   "hooks": {
     "PreToolUse": [
       {
@@ -11,11 +15,29 @@
           }
         ]
       }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear|compact|fork)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/Users/kanaru/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "uv run python /Users/kanaru/.claude/runcat-statusline.py"
   },
   "enabledPlugins": {
     "skill-creator@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "mattpocock-skills@claude-plugins-official": true,
+    "stripe@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "cloudflare": {
@@ -23,11 +45,51 @@
         "source": "github",
         "repo": "cloudflare/skills"
       }
+    },
+    "virtuslab-scala-skill": {
+      "source": {
+        "source": "github",
+        "repo": "virtuslab/scala-skill"
+      }
+    },
+    "astral-sh": {
+      "source": {
+        "source": "github",
+        "repo": "astral-sh/claude-code-plugins"
+      }
     }
   },
   "effortLevel": "high",
   "tui": "fullscreen",
   "preferredNotifChannel": "terminal_bell",
   "remoteControlAtStartup": false,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: None configured",
+      "**Cloud provider(s)**: AWS (per README.md: API, Blend, Repack, Web, Infrastructure all deployed via AWS CDK; AWS CLI/SSO usage documented)",
+      "**Repository visibility**: Private (kanaru0928/kokuin, confirmed via gh)",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: None configured",
+      "**Default / protected branches**: main (default); no classic protections or rulesets listed via gh — treat as unprotected",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: None configured",
+      "**Host containment**: None configured — assume Claude Code runs on an ordinary developer machine or CI runner with open internet",
+      "**Source control**: kanaru0928/kokuin (https://github.com/kanaru0928/kokuin.git) only",
+      "**Trusted internal domains**: None configured",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: None configured",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: api/.env, api/.env.example, blend/.env.example, web/.env, web/.env.example, web/server/utils/secrets.ts — share only with audiences cleared for this project's secrets",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment",
+      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources in infrastructure/ (AWS CDK); anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development",
+      "**Trusted repo**: kanaru0928/kokuin (working directory) and its origin remote (https://github.com/kanaru0928/kokuin.git), private",
+      "**Org-specific CLIs**: None configured"
+    ]
+  }
 }
