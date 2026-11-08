@@ -10,10 +10,11 @@ require("jetpack.packer").add({
 	{ "tani/vim-jetpack" },
 	{ "catppuccin/nvim", as = "catppuccin" },
 	{ "nvim-lualine/lualine.nvim" },
-	{ "github/copilot.vim", lazy = false },
+	{ "zbirenbaum/copilot.lua", lazy = false },
   { "nvim-tree/nvim-web-devicons", lazy = false },
   { "nvim-tree/nvim-tree.lua", lazy = false },
-  { "sindrets/diffview.nvim" }
+  { "sindrets/diffview.nvim" },
+  { "okuuva/auto-save.nvim" }
 })
 
 local jetpack = require("jetpack")
@@ -68,3 +69,6 @@ require("nvim-tree").setup({
 	end,
 })
 
+require("copilot").setup()
+
+require("auto-save").setup()
