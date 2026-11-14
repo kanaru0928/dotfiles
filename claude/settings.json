@@ -91,5 +91,10 @@
       "**Trusted repo**: kanaru0928/kokuin (working directory) and its origin remote (https://github.com/kanaru0928/kokuin.git), private",
       "**Org-specific CLIs**: None configured"
     ]
+  },
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
   }
 }
