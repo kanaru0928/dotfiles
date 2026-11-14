@@ -15,6 +15,7 @@ require("jetpack.packer").add({
   { "stevearc/oil.nvim", lazy = false },
   { "malewicz1337/oil-git.nvim", lazy = false },
   { "sindrets/diffview.nvim" },
+  { "lewis6991/gitsigns.nvim" },
   { "okuuva/auto-save.nvim" },
   { "nvim-treesitter/nvim-treesitter", lazy = false, run = ":TSUpdate" },
   { "MeanderingProgrammer/render-markdown.nvim" },
@@ -28,7 +29,8 @@ require("jetpack.packer").add({
   { "nvim-lua/plenary.nvim" },
   { "nvim-telescope/telescope.nvim" },
   { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
-  { "pwntester/octo.nvim" }
+  { "pwntester/octo.nvim" },
+  { "coder/claudecode.nvim" }
 })
 
 local jetpack = require("jetpack")
@@ -80,15 +82,21 @@ oil.setup({
 	keymaps = {
 		["gd"] = { with_entry_path("DiffviewOpen --"), mode = "n", desc = "Diffview Open" },
 		["gh"] = { with_entry_path("DiffviewFileHistory"), mode = "n", desc = "Diffview File History" },
+		["gp"] = { "actions.paste_from_system_clipboard", mode = "n" },
+		["<Leader>as"] = { "<cmd>ClaudeCodeTreeAdd<CR>", mode = "n", desc = "Add file to Claude" },
 	},
 })
 
 require("oil-git").setup()
 
+require("gitsigns").setup()
+
 require("copilot").setup({
 	suggestion = { enabled = false },
 	panel = { enabled = false },
 })
+
+require("claudecode").setup()
 
 -- octo.nvim のバッファ（buftype=acwrite）は保存すると GitHub に送信されるため、通常のファイルだけを保存する
 require("auto-save").setup({
