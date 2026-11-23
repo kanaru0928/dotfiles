@@ -35,16 +35,16 @@ require("jetpack.packer").add({
 
 local jetpack = require("jetpack")
 
-require("catppuccin").setup({
-	flavour = "mocha",
-})
-
 for _, name in ipairs(jetpack.names()) do
 	if not jetpack.tap(name) then
 		jetpack.sync()
 		break
 	end
 end
+
+require("catppuccin").setup({
+	flavour = "mocha",
+})
 
 vim.cmd.colorscheme("catppuccin-mocha")
 
@@ -76,8 +76,9 @@ oil.setup({
 		show_hidden = true,
 	},
 	float = {
-		max_width = 0.5,
-		max_height = 0.6,
+		border = "rounded",
+		max_width = 0.8,
+		max_height = 0.9,
 	},
 	keymaps = {
 		["gd"] = { with_entry_path("DiffviewOpen --"), mode = "n", desc = "Diffview Open" },
@@ -118,6 +119,8 @@ require("mason-lspconfig").setup({
 -- npm を使わないため、以下のサーバーは mason ではなく pnpm でグローバルに導入する
 -- pnpm add -g typescript vscode-langservers-extracted @olrtg/emmet-language-server
 vim.lsp.enable({ "tsc", "html", "cssls", "emmet_language_server" })
+
+require("python-lsp")
 
 require("blink.cmp").setup({
 	keymap = { preset = "default" },
