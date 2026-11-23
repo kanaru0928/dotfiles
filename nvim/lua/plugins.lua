@@ -35,16 +35,16 @@ require("jetpack.packer").add({
 
 local jetpack = require("jetpack")
 
-require("catppuccin").setup({
-	flavour = "mocha",
-})
-
 for _, name in ipairs(jetpack.names()) do
 	if not jetpack.tap(name) then
 		jetpack.sync()
 		break
 	end
 end
+
+require("catppuccin").setup({
+	flavour = "mocha",
+})
 
 vim.cmd.colorscheme("catppuccin-mocha")
 

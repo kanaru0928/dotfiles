@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
-map("n", "<Leader>e", ":Oil --float<CR>", opts)
+map("n", "<Leader>e", "<cmd>Oil --float<CR>", opts)
 map("n", "<Leader>tc", ":tabclose<CR>", opts)
 map("n", "<Leader>lf", ":lua vim.lsp.buf.format()<CR>", opts)
 map("n", "<Leader>ld", ":lua vim.diagnostic.open_float()<CR>", opts)
