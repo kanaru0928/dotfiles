@@ -1,0 +1,3 @@
+WRN 2026-11-17T13:05:57.036 ?.69736    server_start:197: Failed to start server: operation not permitted: /var/folders/24/zc857fcx6yd8n24c42vb93tw0000gn/T/nvim.kanaru/1mQ8Z2/nvim.69736.0
+WRN 2026-11-20T09:07:56.792 ?.20120    server_start:197: Failed to start server: operation not permitted: /var/folders/24/zc857fcx6yd8n24c42vb93tw0000gn/T/nvim.kanaru/z4MRrn/nvim.20120.0
+WRN 2026-11-20T09:07:59.765 ?.20137    server_start:197: Failed to start server: operation not permitted: /var/folders/24/zc857fcx6yd8n24c42vb93tw0000gn/T/nvim.kanaru/cmUPwN/nvim.20137.0
