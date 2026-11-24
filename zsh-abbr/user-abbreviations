@@ -1,0 +1,2 @@
+abbr "al"="aws sso login --profile"
+abbr "als"="aws sso login --sso-session"
